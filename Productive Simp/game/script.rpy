@@ -105,7 +105,7 @@ label start:
 
     healthgod "VERY WELL SLACKER. YOU'RE DISMISSED"
 
-    "You walk over to tent 4, sit down and look at the lake in the distance. What just happened to you?"
+    "You walk over to campsite 4, sit down and look at the lake in the distance. What just happened to you?"
     "Did you really just die and get sent to a fitness bottcamp run by the most aggressive fitness trainer in the world? (or afterlife?)"
     "As you get lost in your thoughts, you slowly fall asleep. So much has happened, and you feel so tired."
     "A small nap wouldn't hurt right?"
