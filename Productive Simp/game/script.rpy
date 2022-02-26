@@ -6,6 +6,8 @@
 define god = Character("God")
 define YN = Character(name=None)
 define healthgod = Character("God of Health")
+define guide = Character("God of Guidance")
+define guidep = Character("Caitlyn")
 
 # The game starts here.
 
@@ -16,7 +18,7 @@ label start:
     # images directory to show it.
 
     #Scene 1
-    scene bg galaxy
+    scene bg-galaxy
     with fade
 
     $ YN = renpy.input("What is your name? ")
@@ -27,7 +29,7 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show god you died
+    # show god you died
 
     # These display lines of dialogue.
 
@@ -37,7 +39,7 @@ label start:
 
     "And in front of you is a woman with a halo above your head looking at you with an unreadable expression on her face.​"
 
-    show ascending
+    # show ascending
 
     god "Hmmm..."
 
@@ -81,7 +83,7 @@ label start:
     healthgod "ONCE THIS CAMP IS FINISHED WITH YOU, YOU'LL BE THE PINNACLE OF HEALTH."
     healthgod "IN THE MEANTIME, YOU CAN EXPECT TO GO THROUGH HELL IN ORDER TO GET RID OF THOS BAGS UNDER YOUR EYES"
     healthgod "THOSE SORRY EXCUSES FOR ARMS"
-    healthgod "AND THAT DEHYDRATED LOOK. EVEN A ROCK DRINKS MORE WATER THAN YOU DO "
+    healthgod "AND THAT CRUSTY LOOK. EVEN A ROCK DRINKS MORE WATER THAN YOU DO "
     healthgod "HAVE YOU UNDERSTOOD SLACKER?"
 
     YN "Uhh, what?"
@@ -95,7 +97,7 @@ label start:
 
     YN "YES GOD OF HEALTH"
 
-    healthgod "GOOD. GET OFF THOSE SORRY GLUTES SLACKER AND HEAD TO TENT 4. THAT'S WHERE YOU'LL
+    healthgod "GOOD. GET OFF THOSE SORRY GLUTES SLACKER AND HEAD TO CAMPSITE 4. THAT'S WHERE YOU'LL
     BE STAYING DURING YOUR TRAINING ARC"
     healthgod "CAMPFIRE ORIENTATION IS AT 7PM SHARP. IF YOU'RE LATE, I'LL FINE YOU 500 PUSH UPS. DID YOU GET THAT SLACKER?"
 
@@ -109,9 +111,55 @@ label start:
     "A small nap wouldn't hurt right?"
 
     #Scene 3
+
     scene camping
     with fade
 
+    "You feel a slight chill cross your spine as you come back to consciousness. What is this ominous feeling you have?"
+    "As you watch the sun set, you suddenly remember about the campfire orientation event!!!"
+    YN "{b} OH NOOOO!!!!! {/b}"
+
+    "You lookat your watch. 6:58 PM! Without skipping a beat, you dash across the tents and go sit by the campfire
+    , sitting down on a log just as your watch indicates 7:00 PM!"
+
+    "{i} The [healthgod] watches your antics with a disapproving look {/i}"
+
+    "You look around. A handful of people sit on large wooden logs, chatting with each other or roasting marshmallows.
+    Soft guitar sturms are heard along with the crackling of the flames."
+
+    "A tall woman with a bucket hat approaches you with a friendly smile."
+
+    guide "Well hello there! Welcome to Health Bootcamp! I'm the [guide], but you can just call
+    me [guidep]!"
+    guidep "Is there anything you'd like to know?"
+
+    YN "What just happened to me?"
+
+    guidep "Yeahhh, sorry about that. Our leaders can be quite eccentric, but I assure you that the normal folks here are great!"
+
+    "The [healthgod] frowns. Is he able to hear your conversation? Are gods all-knowing? Can he read your thoughts?"
+
+    guidep "Just neat people all around!"
+    guidep "Don't worry too much okay? We're here to work on ourselves and have a good time!"
+
+    YN "Could you show me around?"
+
+    guidep "Of Course! We have 5 main tents here. Each one is adapted to a specific facet of your health."
+
+    #show Shef
+    guidep "Tent 1 is dedicated to your food habits."
+    #show h2uwu
+    guidep "Tent 2 is for your hydration."
+    #show buff lad
+    guidep "Tent 3 is the fitness space."
+    #show grass lass
+    guidep "Tent 4 is for all your social needs."
+    #show Prezzz*
+    guidep "And Tent 5 is to go to sleep."
+    
+    guidep "I suggest you go meet them! Return to me afterwards if you have any other questions."
+
+    "Which mentor would you like to know?"
 
     # This ends the game.
 
