@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+Productive Simp/game/cache/bytecode.rpyb
+Productive Simp/game/cache/bytecode.rpyb
+Productive Simp/game/cache/pyanalysis.rpyb
+Productive Simp/traceback.txt
+Productive Simp/log.txt
+Productive Simp/game/saves/_reload-2-LT1.save
+Productive Simp/game/cache/shaders.txt
+Productive Simp/errors.txt
