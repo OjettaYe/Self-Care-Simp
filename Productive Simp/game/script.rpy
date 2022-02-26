@@ -28,9 +28,9 @@ label start:
 
     # These display lines of dialogue.
 
-    YN "You're floating.​"
+    "You're floating.​"
 
-    YN "Around you is a horizon of stars stretching into the dark backdrop of the universe.​"
+    "Around you is a horizon of stars stretching into the dark backdrop of the universe.​"
 
     "And in front of you is a woman with a halo above your head looking at you with an unreadable expression on her face.​"
 
