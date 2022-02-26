@@ -69,7 +69,7 @@ label start:
     "{i}She yeets you into the distance{/i} (cue Mario-like scream)?"
 
     # Scene 2
-    scene camping
+    scene gate
     with vpunch
 
     "You fall right in front of the gates of Health Camp. On the gates, a text is inscribed:"
@@ -81,29 +81,32 @@ label start:
     people for her scenarios."
     healthgod "LISTEN HERE SLACKER. WELCOME TO HEALTH CAMP."
     healthgod "ONCE THIS CAMP IS FINISHED WITH YOU, YOU'LL BE THE PINNACLE OF HEALTH."
-    healthgod "IN THE MEANTIME, YOU CAN EXPECT TO GO THROUGH HELL IN ORDER TO GET RID OF THOS BAGS UNDER YOUR EYES"
-    healthgod "THOSE SORRY EXCUSES FOR ARMS"
-    healthgod "AND THAT CRUSTY LOOK. EVEN A ROCK DRINKS MORE WATER THAN YOU DO "
+    healthgod "IN THE MEANTIME, YOU CAN EXPECT TO GO THROUGH HELL IN ORDER TO GET RID OF THOS BAGS UNDER YOUR EYES" with hpunch
+    healthgod "THOSE SORRY EXCUSES FOR ARMS" with hpunch
+    healthgod "AND THAT CRUSTY LOOK. EVEN A ROCK DRINKS MORE WATER THAN YOU DO " with hpunch
     healthgod "HAVE YOU UNDERSTOOD SLACKER?"
 
     YN "Uhh, what?"
 
-    healthgod "WHAT DID YOU SAY SLACKER? NO QUESTIONS!"
+    healthgod "WHAT DID YOU SAY SLACKER? NO QUESTIONS!" with hpunch
     healthgod "I WANT A 'YES GOD OF HEALTH' FROM YOU! DID YOU GET THAT SLACKER?"
 
     YN 'Yes God of Health'
 
-    healthgod "LOUDER SLACKER. GET ALL THAT POLLUTION OUT OF YOUR LUNGS"
+    healthgod "LOUDER SLACKER. GET ALL THAT POLLUTION OUT OF YOUR LUNGS" with hpunch
 
-    YN "YES GOD OF HEALTH"
+    YN "YES GOD OF HEALTH" with hpunch
 
     healthgod "GOOD. GET OFF THOSE SORRY GLUTES SLACKER AND HEAD TO CAMPSITE 4. THAT'S WHERE YOU'LL
     BE STAYING DURING YOUR TRAINING ARC"
     healthgod "CAMPFIRE ORIENTATION IS AT 7PM SHARP. IF YOU'RE LATE, I'LL FINE YOU 500 PUSH UPS. DID YOU GET THAT SLACKER?"
 
-    YN "YES GOD OF HEALTH"
+    YN "YES GOD OF HEALTH" with hpunch
 
     healthgod "VERY WELL SLACKER. YOU'RE DISMISSED"
+
+    scene lake
+    with slideleft
 
     "You walk over to campsite 4, sit down and look at the lake in the distance. What just happened to you?"
     "Did you really just die and get sent to a fitness bottcamp run by the most aggressive fitness trainer in the world? (or afterlife?)"
@@ -112,12 +115,16 @@ label start:
 
     #Scene 3
 
-    scene camping
+    scene black
     with fade
 
     "You feel a slight chill cross your spine as you come back to consciousness. What is this ominous feeling you have?"
+    
+    scene sunset
+    with fade
+
     "As you watch the sun set, you suddenly remember about the campfire orientation event!!!"
-    YN "{b} OH NOOOO!!!!! {/b}"
+    YN "{b} OH NOOOO!!!!! {/b}" with hpunch
 
     "You look at your watch. 6:58 PM! Without skipping a beat, you dash across the tents and go sit by the campfire
     , sitting down on a log just as your watch indicates 7:00 PM!"
@@ -147,13 +154,21 @@ label start:
     guidep "Of Course! We have 5 main tents here. Each one is adapted to a specific facet of your health."
 
     #show Shef
+    scene tent1
     guidep "Tent 1 is dedicated to your food habits."
+    
+    scene tent2
     #show h2uwu
     guidep "Tent 2 is for your hydration."
+
+    scene tent3
     #show buff lad
     guidep "Tent 3 is the fitness space."
+
+    scene tent4
     #show grass lass
     guidep "Tent 4 is for all your social needs."
+
     #show Prezzz*
     guidep "And Tent 5 is to go to sleep."
 
