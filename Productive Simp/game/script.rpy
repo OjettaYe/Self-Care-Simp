@@ -108,8 +108,6 @@ label start:
     healthgod "VERY WELL SLACKER. YOU'RE DISMISSED"
 
     hide healthgod with moveoutleft
-    pause (1.0)
-
     scene lake
     with slideleft
 
@@ -184,6 +182,7 @@ label start:
     #show grass lass
     guidep "Tent 4 is for all your social needs."
 
+    scene tent5
     #show Prezzz*
     guidep "And Tent 5 is to go to sleep."
 
