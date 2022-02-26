@@ -24,7 +24,7 @@ label start:
     $ YN = renpy.input("What is your name? ")
     $ YN = YN.strip()
     if YN == "":
-        $ YN = "Aigiarn"
+        $ YN = "Y/N"
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
@@ -48,7 +48,7 @@ label start:
     god "Hello [YN]. I am what you call 'God' "
 
     YN "Where am I?"
-    
+
     god "The afterlife. You were hit by a truck. Don't worry about it. "
 
     YN "What?! Am I dead?"
@@ -156,7 +156,7 @@ label start:
     guidep "Tent 4 is for all your social needs."
     #show Prezzz*
     guidep "And Tent 5 is to go to sleep."
-    
+
     guidep "I suggest you go meet them! Return to me afterwards if you have any other questions."
 
     "Which mentor would you like to know?"
