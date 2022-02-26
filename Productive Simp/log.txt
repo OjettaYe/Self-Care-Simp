@@ -1,4 +1,4 @@
-Sat Feb 26 18:02:02 2022
+Sat Feb 26 18:11:02 2022
 Windows-10-10.0.22000
 Ren'Py 7.4.11.2266
  
@@ -7,14 +7,15 @@ Bootstrap to the start of init.init took 0.21s
 Early init took 0.01s
 Loader init took 0.03s
 Loading error handling took 0.04s
-Loading script took 0.23s
-Loading save slot metadata. took 0.02s
+Loading script took 0.39s
+Loading save slot metadata. took 0.03s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.10s
 Loading analysis data took 0.04s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Nezha\\AppData\\Roaming/RenPy/backups\\Productive Simp':
 Dump and make backups. took 0.15s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
@@ -26,12 +27,12 @@ Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.07s
 Build styles took 0.01s
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.07s
 Prepare screens took 0.14s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.06s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.13s
@@ -44,7 +45,5 @@ Vendor: 'ATI Technologies Inc.'
 Renderer: 'AMD Radeon(TM) Graphics'
 Version: '4.6.13596 Compatibility Profile Context 20.10.44.04 27.20.11044.4003'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1733, 975) drawable=(1733, 975)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 991) drawable=(1920, 991)
+Screen sizes: virtual=(1920, 1080) physical=(1738, 978) drawable=(1738, 978)
 Maximum texture size: 4096x4096
