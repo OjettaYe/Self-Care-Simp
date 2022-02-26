@@ -39,7 +39,7 @@ label start:
 
     "And in front of you is a woman with a halo above your head looking at you with an unreadable expression on her face.​"
 
-    # show ascending
+    show god with fade
 
     god "Hmmm..."
 
@@ -77,6 +77,8 @@ label start:
 
     "{i} The god of Health arrives in front of the gates to see what all the ruckus is about {/i}"
 
+    show healthgod with moveinleft
+
     healthgod "What? Why do I get another slacker here again? The big god really doesn't pick the right
     people for her scenarios."
     healthgod "LISTEN HERE SLACKER. WELCOME TO HEALTH CAMP."
@@ -105,6 +107,9 @@ label start:
 
     healthgod "VERY WELL SLACKER. YOU'RE DISMISSED"
 
+    hide healthgod with moveoutleft
+    pause (1.0)
+
     scene lake
     with slideleft
 
@@ -129,12 +134,18 @@ label start:
     "You look at your watch. 6:58 PM! Without skipping a beat, you dash across the tents and go sit by the campfire
     , sitting down on a log just as your watch indicates 7:00 PM!"
 
+    show healthgod at right with moveinright
+
     "{i} The [healthgod] watches your antics with a disapproving look {/i}"
+
+    hide healthgod at right with moveoutright
 
     "You look around. A handful of people sit on large wooden logs, chatting with each other or roasting marshmallows.
     Soft guitar sturms are heard along with the crackling of the flames."
 
     "A tall woman with a bucket hat approaches you with a friendly smile."
+
+    show guide at left with moveinleft
 
     guide "Well hello there! Welcome to Health Bootcamp! I'm the [guide], but you can just call
     me [guidep]!"
@@ -144,7 +155,11 @@ label start:
 
     guidep "Yeahhh, sorry about that. Our leaders can be quite eccentric, but I assure you that the normal folks here are great!"
 
+    show healthgod at right with moveinright
+
     "The [healthgod] frowns. Is he able to hear your conversation? Are gods all-knowing? Can he read your thoughts?"
+
+    hide healthgod at right with moveoutright
 
     guidep "Just neat people all around!"
     guidep "Don't worry too much okay? We're here to work on ourselves and have a good time!"
@@ -173,7 +188,7 @@ label start:
     guidep "And Tent 5 is to go to sleep."
 
     guidep "I suggest you go meet them! Return to me afterwards if you have any other questions."
-
+    hide guide at left with moveoutleft
     "Which mentor would you like to know?"
 
     # This ends the game.
