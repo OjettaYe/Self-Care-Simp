@@ -3,8 +3,8 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
-
+define god = Character("God")
+define YN = Character(name=None)
 
 # The game starts here.
 
@@ -20,13 +20,21 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show god you died
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    YN "You're floating.​"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    YN "Around you is a horizon of stars stretching into the dark backdrop of the universe.​"
+
+    "And in front of you is a woman with a halo above your head looking at you with an unreadable expression on her face.​"
+
+    show ascending
+
+    god "Hmmm..."
+
+    god "first choice options"
 
     # This ends the game.
 
