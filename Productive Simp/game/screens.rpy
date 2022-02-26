@@ -41,8 +41,8 @@ init python:
                 st_change = st - self.last_st
 
                 self.last_st = st
-                self.actual_x = math.floor(self.actual_x + ((self.x - self.actual_x) * speed * (st_change )) * self.paramod)
-                self.actual_y = math.floor(self.actual_y + ((self.y - self.actual_y) * speed * (st_change)) * self.paramod)
+                self.actual_x = self.x
+                self.actual_y = self.y
 
 
                 if mouse_distance_y <= minimum_speed:
@@ -459,7 +459,7 @@ style main_menu_frame:
     # xfill True
     yfill True
 
-    # background "gui/overlay/main_menu.png"
+    background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
