@@ -119,7 +119,7 @@ label start:
     "As you watch the sun set, you suddenly remember about the campfire orientation event!!!"
     YN "{b} OH NOOOO!!!!! {/b}"
 
-    "You lookat your watch. 6:58 PM! Without skipping a beat, you dash across the tents and go sit by the campfire
+    "You look at your watch. 6:58 PM! Without skipping a beat, you dash across the tents and go sit by the campfire
     , sitting down on a log just as your watch indicates 7:00 PM!"
 
     "{i} The [healthgod] watches your antics with a disapproving look {/i}"
