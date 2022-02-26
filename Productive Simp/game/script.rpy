@@ -15,7 +15,9 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
+    #Scene 1
     scene bg galaxy
+    with fade
 
     $ YN = renpy.input("What is your name? ")
     $ YN = YN.strip()
@@ -64,7 +66,9 @@ label start:
 
     "{i}She yeets you into the distance{/i} (cue Mario-like scream)?"
 
+    # Scene 2
     scene camping
+    with vpunch
 
     "You fall right in front of the gates of Health Camp. On the gates, a text is inscribed:"
     "HEALTH CAMP, HEALTH LIMBO (get your shit together)"
@@ -103,6 +107,10 @@ label start:
     "Did you really just die and get sent to a fitness bottcamp run by the most aggressive fitness trainer in the world? (or afterlife?)"
     "As you get lost in your thoughts, you slowly fall asleep. So much has happened, and you feel so tired."
     "A small nap wouldn't hurt right?"
+
+    #Scene 3
+    scene camping
+    with fade
 
 
     # This ends the game.
