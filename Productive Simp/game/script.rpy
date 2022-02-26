@@ -5,7 +5,7 @@
 
 define god = Character("God")
 define YN = Character(name=None)
-define healthgod = Character("Goddess of Health")
+define healthgod = Character("God of Health")
 
 # The game starts here.
 
@@ -68,6 +68,41 @@ label start:
 
     "You fall right in front of the gates of Health Camp. On the gates, a text is inscribed:"
     "HEALTH CAMP, HEALTH LIMBO (get your shit together)"
+
+    "{i} The god of Health arrives in front of the gates to see what all the ruckus is about {/i}"
+
+    healthgod "What? Why do I get another slacker here again? The big god really doesn't pick the right
+    people for her scenarios."
+    healthgod "LISTEN HERE SLACKER. WELCOME TO HEALTH CAMP."
+    healthgod "ONCE THIS CAMP IS FINISHED WITH YOU, YOU'LL BE THE PINNACLE OF HEALTH."
+    healthgod "IN THE MEANTIME, YOU CAN EXPECT TO GO THROUGH HELL IN ORDER TO GET RID OF THOS BAGS UNDER YOUR EYES"
+    healthgod "THOSE SORRY EXCUSES FOR ARMS"
+    healthgod "AND THAT DEHYDRATED LOOK. EVEN A ROCK DRINKS MORE WATER THAN YOU DO "
+    healthgod "HAVE YOU UNDERSTOOD SLACKER?"
+
+    YN "Uhh, what?"
+
+    healthgod "WHAT DID YOU SAY SLACKER? NO QUESTIONS!"
+    healthgod "I WANT A 'YES GOD OF HEALTH' FROM YOU! DID YOU GET THAT SLACKER?"
+
+    YN 'Yes God of Health'
+
+    healthgod "LOUDER SLACKER. GET ALL THAT POLLUTION OUT OF YOUR LUNGS"
+
+    YN "YES GOD OF HEALTH"
+
+    healthgod "GOOD. GET OFF THOSE SORRY GLUTES SLACKER AND HEAD TO TENT 4. THAT'S WHERE YOU'LL
+    BE STAYING DURING YOUR TRAINING ARC"
+    healthgod "CAMPFIRE ORIENTATION IS AT 7PM SHARP. IF YOU'RE LATE, I'LL FINE YOU 500 PUSH UPS. DID YOU GET THAT SLACKER?"
+
+    YN "YES GOD OF HEALTH"
+
+    healthgod "VERY WELL SLACKER. YOU'RE DISMISSED"
+
+    "You walk over to tent 4, sit down and look at the lake in the distance. What just happened to you?"
+    "Did you really just die and get sent to a fitness bottcamp run by the most aggressive fitness trainer in the world? (or afterlife?)"
+    "As you get lost in your thoughts, you slowly fall asleep. So much has happened, and you feel so tired."
+    "A small nap wouldn't hurt right?"
 
 
     # This ends the game.
