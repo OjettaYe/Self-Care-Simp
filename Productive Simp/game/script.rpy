@@ -16,7 +16,7 @@ label start:
     # images directory to show it.
 
     #Scene 1
-    scene bg galaxy
+    scene bg-galaxy
     with fade
 
     $ YN = renpy.input("What is your name? ")
@@ -27,7 +27,7 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show god you died
+    # show god you died
 
     # These display lines of dialogue.
 
@@ -37,7 +37,7 @@ label start:
 
     "And in front of you is a woman with a halo above your head looking at you with an unreadable expression on her face.​"
 
-    show ascending
+    # show ascending
 
     god "Hmmm..."
 
