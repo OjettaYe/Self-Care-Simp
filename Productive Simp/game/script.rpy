@@ -45,6 +45,7 @@ label start:
     # These display lines of dialogue.
 
     "You're floating.​"
+    jump menutent5
 
     "Around you is a horizon of stars stretching into the dark backdrop of the universe.​"
 
@@ -228,6 +229,7 @@ label tent5:
         unknown "You must be the newbie. I'm assuming you're here for bedtime?"
         unknown "It's a little early for that, but hey, to each their own."
     
+    
     label menutent5:
     menu:
         "Yes, sleep. Please":
@@ -235,29 +237,31 @@ label tent5:
             $sleeptxt = ''
             $validtime = True
             $error=''
+            $overnight=""
+            $timeslept = 0
             label entersleep:
-            $sleeptxt = renpy.input("Please enter when you go to bed (hh:minmin) ")
+            $sleeptxt = renpy.input("Please enter when you go to bed (h:min) ")
             python:
-                import time
+                from datetime import datetime
                 try:
                     
-                    sleepstart = time.strptime(sleeptxt, "%H:%M")
+                    sleepstart = datetime.strptime(sleeptxt, "%H:%M")
                     validtime = True
                 except Exception as e:
                     error = e
                     validtime = False
-            # "[sleeptxt]"
-            # "[sleepstart]"
-            # "[error]"
+            "[sleeptxt]"
+            "[sleepstart]"
+            "[error]"
             if validtime != True :
                 "Sorry, that's an invalid time."
                 jump entersleep
-            $sleeptxt = renpy.input("Please enter when you go to bed (hh:minmin) ")
+            $sleeptxt = renpy.input("Please enter when you wake up (h:minm) ")
             python:
                 import time
                 try:
                     
-                    sleepend = time.strptime(sleeptxt, "%H:%M")
+                    sleepend = datetime.strptime(sleeptxt, "%H:%M")
                     validtime = True
                 except Exception as e:
                     error = e
@@ -269,6 +273,23 @@ label tent5:
                 "Sorry, that's an invalid time."
                 jump entersleep
             #Time choices
+            "TEST1"
+            $test = (sleepstart.strftime('%H'))
+            if (test == "20"):
+                "TEST2"
+            "[test]"
+            "Python"
+            python:
+                def timeAdd(t1, t2):
+                    time1 = float(t1.strftime('%H')) + float(t1.strftime('%M')/60)
+                    time2 = float(t2.strftime('%H')) + float(t2.strftime('%M')/60)
+                    if float(t2.strftime('%H')) < float(t1.strftime('%H')):
+                        temp = 24 - time2
+                        time2+=temp
+                    timeslept = time1 + time2
+                timeAdd(sleepstart, sleepend)
+            "Overnight? YN"
+            "[timeslept]"
             "Yikes, you really do need to work on that huh?"
             "Hmm, and you actually stick to that?"
             jump menutent5
@@ -277,7 +298,7 @@ label tent5:
             unknown "I am the mentor for your poor soul's sleep schedule. You can call Prezzz.
             It's short for Sleep President"
 
-            YN "... but you don't look sleey"
+            YN "... but you don't look sleepy"
 
             Prezzz "Exactly. Because I get enough sleep."
 
