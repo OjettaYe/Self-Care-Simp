@@ -207,7 +207,7 @@ label start:
     scene sunset
     guidep "I suggest you go meet them! Return to me afterwards if you have any other questions."
     hide guide at left with moveoutleft
-xw
+
     menu mentorpick:
         "Which mentor would you like to know?"
 
