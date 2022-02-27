@@ -61,6 +61,8 @@ label start:
 
     # These display lines of dialogue.
 
+    play music galaxy
+
     "You're floating.​"
 
     "Around you is a horizon of stars stretching into the dark backdrop of the universe.​"
@@ -99,9 +101,10 @@ label start:
     # Scene 2
     scene gate
     with vpunch
+    play music entrance
 
     "You fall right in front of the gates of Health Camp. On the gates, a text is inscribed:"
-    "HEALTH CAMP, HEALTH LIMBO (get your sh*t together)"
+    "HEALTH CAMP (get your sh*t together)"
 
     "{i} The [healthgod] arrives in front of the gates to see what all the ruckus is about {/i}"
 
@@ -109,18 +112,18 @@ label start:
 
     healthgod "What? Why do I get another slacker here again? The big god really doesn't pick the right
     people for her scenarios."
-    healthgod "LISTEN HERE SLACKER. WELCOME TO HEALTH CAMP."
+    healthgod "LISTEN HERE, SLACKER. WELCOME TO HEALTH CAMP."
     healthgod "ONCE THIS CAMP IS FINISHED WITH YOU, YOU'LL BE THE PINNACLE OF HEALTH."
     healthgod "IF YOU EVER WANT TO LEAVE, YOU'LL HAVE TO GET A BADGE FROM ALL FIVE CAMP COUNSELORS."
     healthgod "IN THE MEANTIME, YOU CAN EXPECT TO GO THROUGH HELL IN ORDER TO GET RID OF THOSE BAGS UNDER YOUR EYES" with hpunch
     healthgod "THOSE SORRY EXCUSES FOR ARMS" with hpunch
     healthgod "AND THAT CRUSTY LOOK. EVEN A ROCK DRINKS MORE WATER THAN YOU DO " with hpunch
-    healthgod "HAVE YOU UNDERSTOOD SLACKER?"
+    healthgod "HAVE YOU UNDERSTOOD, SLACKER?"
 
     YN "Uhh, what?"
 
     healthgod "WHAT DID YOU SAY SLACKER? NO QUESTIONS!" with hpunch
-    healthgod "I WANT A 'YES GOD OF HEALTH' FROM YOU! DID YOU GET THAT SLACKER?"
+    healthgod "I WANT A 'YES GODDESS OF HEALTH' FROM YOU! DID YOU GET THAT SLACKER?"
 
     YN 'Yes [healthgod]'
 
@@ -152,6 +155,7 @@ label start:
 
     "You feel a slight chill run down your spine as you come back to consciousness. What is this ominous feeling you have?"
     
+    play music campfire
     scene sunset
     with fade
 
