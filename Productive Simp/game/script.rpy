@@ -1,4 +1,9 @@
 ﻿# The script of the game goes in this file.
+#python
+init python:
+    from datetime import datetime
+
+
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -8,6 +13,10 @@ define YN = Character(name=None)
 define healthgod = Character("God of Health")
 define guide = Character("God of Guidance")
 define guidep = Character("Caitlyn")
+define unknown = Character("???")
+
+define sleepstart = 0
+define sleepend = 0
 
 # The game starts here.
 
@@ -183,13 +192,65 @@ label start:
     guidep "Tent 4 is for all your social needs."
 
     scene tent5
-    #show Prezzz*
+    show prezzz at right with moveinright
     guidep "And Tent 5 is to go to sleep."
 
+    scene sunset
     guidep "I suggest you go meet them! Return to me afterwards if you have any other questions."
     hide guide at left with moveoutleft
-    "Which mentor would you like to know?"
+
+    menu mentorpick:
+        "Which mentor would you like to know?"
+
+        "Tent 1 councilor, Shef":
+            "Mmmh, it seems he's not there yet. Maybe try another tent?"
+            jump mentorpick
+        "Tent 2 councilor, h2uwu":
+            "Mmmh, it seems he's not there yet. Maybe try another tent?"
+        "Tent 3 councilor, buff lad":
+            "Mmmh, it seems he's not there yet. Maybe try another tent?"
+        "Tent 4 councilor, grass lass":
+            "Mmmh, it seems he's not there yet. Maybe try another tent?"
+        "Tent 5 councilor, Prezzz":
+            "You walkt towards tent 5"
+            jump tent5
+
+label tent5:
+    scene tent5
+    "You arrive at the tent on the far right."
+    show prezzz with moveinright
+    unknown "You must be the newbie. I'm assuming you're here for bedtime?"
+    unknown "It's a little early for that, but hey, to each their own."
+    menu:
+        "Yes, sleep. Please":
+            "What's your sleep schedule like?"
+            $sleeptxt = ''
+            $validtime = True
+            $error=''
+            label entersleep:
+            $sleeptxt = renpy.input("Please enter when you go to bed (hh:minmin) ")
+            python:
+                import time
+                try:
+                    
+                    sleepstart = time.strptime(sleeptxt, "%H:%M")
+                    validtime = True
+                except Exception as e:
+                    error = e
+                    validtime = False
+            # "[sleeptxt]"
+            # "[sleepstart]"
+            # "[error]"
+            if validtime != True :
+                "Sorry, that's an invalid time."
+                jump entersleep
+
+
+
+
+
+
+    #Scene 4
 
     # This ends the game.
-
     return
