@@ -72,7 +72,7 @@ label start:
 
     YN "Where am I heading?"
 
-    god "See, originally, you were supposed to be the savior of this neat world I had going on, right?"
+    god "See, originally, you were supposed to be the savior of this neat little world I had going on, right?"
     god "The whole, classic, hero from another dimension versus demon kind of thing..."
     god "Though, looking at you, that's not happening anytime soon."
 
@@ -81,14 +81,14 @@ label start:
     god "Well, how are you suppposed to save the world when you can't even save yourself?"
     god "I'm sending you to Health Camp. Off you go!"
 
-    "{i}She yeets you into the distance{/i} (cue Mario-like scream)?"
+    "{i}She punts you into the distance{/i} (cue Mario-like scream)?"
 
     # Scene 2
     scene gate
     with vpunch
 
     "You fall right in front of the gates of Health Camp. On the gates, a text is inscribed:"
-    "HEALTH CAMP, HEALTH LIMBO (get your shit together)"
+    "HEALTH CAMP, HEALTH LIMBO (get your sh*t together)"
 
     "{i} The god of Health arrives in front of the gates to see what all the ruckus is about {/i}"
 
@@ -98,7 +98,8 @@ label start:
     people for her scenarios."
     healthgod "LISTEN HERE SLACKER. WELCOME TO HEALTH CAMP."
     healthgod "ONCE THIS CAMP IS FINISHED WITH YOU, YOU'LL BE THE PINNACLE OF HEALTH."
-    healthgod "IN THE MEANTIME, YOU CAN EXPECT TO GO THROUGH HELL IN ORDER TO GET RID OF THOS BAGS UNDER YOUR EYES" with hpunch
+    healthgod "IF YOU EVER WANT TO LEAVE, YOU'LL HAVE TO GET A BADGE FROM ALL FIVE CAMP COUNSELORS."
+    healthgod "IN THE MEANTIME, YOU CAN EXPECT TO GO THROUGH HELL IN ORDER TO GET RID OF THOSE BAGS UNDER YOUR EYES" with hpunch
     healthgod "THOSE SORRY EXCUSES FOR ARMS" with hpunch
     healthgod "AND THAT CRUSTY LOOK. EVEN A ROCK DRINKS MORE WATER THAN YOU DO " with hpunch
     healthgod "HAVE YOU UNDERSTOOD SLACKER?"
@@ -114,7 +115,7 @@ label start:
 
     YN "YES GOD OF HEALTH" with hpunch
 
-    healthgod "GOOD. GET OFF THOSE SORRY GLUTES SLACKER AND HEAD TO CAMPSITE 4. THAT'S WHERE YOU'LL
+    healthgod "GOOD. GET OFF THOSE SORRY GLUTES, SLACKER, AND HEAD TO CAMPSITE 4. THAT'S WHERE YOU'LL
     BE STAYING DURING YOUR TRAINING ARC"
     healthgod "CAMPFIRE ORIENTATION IS AT 7PM SHARP. IF YOU'RE LATE, I'LL FINE YOU 500 PUSH UPS. DID YOU GET THAT SLACKER?"
 
@@ -127,8 +128,8 @@ label start:
     with slideleft
 
     "You walk over to campsite 4, sit down and look at the lake in the distance. What just happened to you?"
-    "Did you really just die and get sent to a fitness bottcamp run by the most aggressive fitness trainer in the world? (or afterlife?)"
-    "As you get lost in your thoughts, you slowly fall asleep. So much has happened, and you feel so tired."
+    "Did you really just die and get sent to a fitness bootcamp run by the most aggressive fitness trainer in the world? (or afterlife?)"
+    "As you get lost in your thoughts, you slowly fall asleep. So much has happened, and you feel so, so tired."
     "A small nap wouldn't hurt right?"
 
     #Scene 3
@@ -136,7 +137,7 @@ label start:
     scene black
     with fade
 
-    "You feel a slight chill cross your spine as you come back to consciousness. What is this ominous feeling you have?"
+    "You feel a slight chill run down your spine as you come back to consciousness. What is this ominous feeling you have?"
     
     scene sunset
     with fade
@@ -154,7 +155,7 @@ label start:
     hide healthgod at right with moveoutright
 
     "You look around. A handful of people sit on large wooden logs, chatting with each other or roasting marshmallows.
-    Soft guitar sturms are heard along with the crackling of the flames."
+    Soft guitar strums are heard along with the crackling of the flames."
 
     "A tall woman with a bucket hat approaches you with a friendly smile."
 
@@ -183,7 +184,7 @@ label start:
 
     #show Shef
     scene tent1
-    guidep "Tent 1 is dedicated to your food habits."
+    guidep "Tent 1 is dedicated to your nutritional habits."
     
     scene tent2
     #show h2uwu
@@ -206,22 +207,22 @@ label start:
     scene sunset
     guidep "I suggest you go meet them! Return to me afterwards if you have any other questions."
     hide guide at left with moveoutleft
-
-
-
-    label tentall:
+xw
     menu mentorpick:
         "Which mentor would you like to know?"
 
         "Tent 1 councilor, Shef":
-            "Mmmh, it seems he's not there yet. Maybe try another tent?"
+            "Mmmh, it seems she's not there yet. Maybe try another tent?"
             jump mentorpick
-        "Tent 2 councilor, h2uwu":
-            "Mmmh, it seems he's not there yet. Maybe try another tent?"
-        "Tent 3 councilor, buff lad":
-            "Mmmh, it seems he's not there yet. Maybe try another tent?"
-        "Tent 4 councilor, grass lass":
-            "Mmmh, it seems he's not there yet. Maybe try another tent?"
+        "Tent 2 councilor, H2wu":
+            "Mmmh, it seems she's not there yet. Maybe try another tent?"
+            jump mentorpick
+        "Tent 3 councilor, Buffie":
+            "Mmmh, it seems she's not there yet. Maybe try another tent?"
+            jump mentorpick
+        "Tent 4 councilor, Grass Lass":
+            "Mmmh, it seems she's not there yet. Maybe try another tent?"
+            jump mentorpick
         "Tent 5 councilor, Prezzz":
             "You walk towards tent 5"
             jump tent5
@@ -257,7 +258,7 @@ label tent5:
             if validtime != True :
                 "Sorry, that's an invalid time."
                 jump entersleep
-            $sleeptxt = renpy.input("Please enter when you wake up (h:minm) ")
+            $sleeptxt = renpy.input("Please enter when you wake up (h:min) ")
             python:
                 import time
                 try:
@@ -285,7 +286,7 @@ label tent5:
             jump menutent5
 
         "I just wanted to meet the mentor" if firstTimeT5:
-            unknown "I am the mentor for your poor soul's sleep schedule. You can call Prezzz.
+            unknown "I am the mentor for your poor soul's sleep schedule. You can call me Prezzz.
             It's short for Sleep President"
 
             YN "... but you don't look sleepy"
@@ -300,7 +301,7 @@ label tent5:
         "Mmh, actually no. (Return to all tents)":
             "See you later. (Whispers: {i}in your dreams{/i})"
     hide prezzz at right with moveoutright
-    jump tentall
+    jump mentorpick
 
 
         

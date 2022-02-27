@@ -11,7 +11,7 @@ init python:
     import pygame
     import math
 
-
+#paralax 
     class TrackCursor(renpy.Displayable):
 
         def __init__(self, child, paramod, **kwargs):
