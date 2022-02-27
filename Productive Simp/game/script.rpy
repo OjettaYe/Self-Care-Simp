@@ -103,7 +103,7 @@ label start:
     "You fall right in front of the gates of Health Camp. On the gates, a text is inscribed:"
     "HEALTH CAMP, HEALTH LIMBO (get your sh*t together)"
 
-    "{i} The god of Health arrives in front of the gates to see what all the ruckus is about {/i}"
+    "{i} The [healthgod] arrives in front of the gates to see what all the ruckus is about {/i}"
 
     show healthgod with moveinleft
 
