@@ -472,9 +472,13 @@ style main_menu_text:
 
 style main_menu_title:
     properties gui.text_properties("title")
+    color u'#3a241b'
+
 
 style main_menu_version:
     properties gui.text_properties("version")
+    color u'#3a241b'
+
 
 
 ## Game Menu screen ############################################################
