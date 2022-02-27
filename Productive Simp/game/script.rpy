@@ -10,15 +10,25 @@ init python:
 
 define god = Character("God")
 define YN = Character(name=None)
-define healthgod = Character("God of Health")
-define guide = Character("God of Guidance")
+define healthgod = Character("Goddess of Health")
+define guide = Character("Goddess of Guidance")
 define guidep = Character("Caitlyn")
 define unknown = Character("???")
 define prezzz = Character("Prezzz")
 
+#Other councillors
+define food = Character("Shef")
+define water = Character("H2wu")
+define fitness = Character("Buffie")
+define social = Character("Grass Lass")
+
 define sleepstart = 0
 define sleepend = 0
 define sleeplength = 0
+define firstTimeT1 = True
+define firstTimeT2 = True
+define firstTimeT3 = True
+define firstTimeT4 = True
 define firstTimeT5 = True
 define isOvernight = False
 
@@ -112,17 +122,17 @@ label start:
     healthgod "WHAT DID YOU SAY SLACKER? NO QUESTIONS!" with hpunch
     healthgod "I WANT A 'YES GOD OF HEALTH' FROM YOU! DID YOU GET THAT SLACKER?"
 
-    YN 'Yes God of Health'
+    YN 'Yes [healthgod]'
 
     healthgod "LOUDER SLACKER. GET ALL THAT POLLUTION OUT OF YOUR LUNGS" with hpunch
 
-    YN "YES GOD OF HEALTH" with hpunch
+    YN "YES GODDESS OF HEALTH" with hpunch
 
     healthgod "GOOD. GET OFF THOSE SORRY GLUTES, SLACKER, AND HEAD TO CAMPSITE 4. THAT'S WHERE YOU'LL
     BE STAYING DURING YOUR TRAINING ARC"
     healthgod "CAMPFIRE ORIENTATION IS AT 7PM SHARP. IF YOU'RE LATE, I'LL FINE YOU 500 PUSH UPS. DID YOU GET THAT SLACKER?"
 
-    YN "YES GOD OF HEALTH" with hpunch
+    YN "YES GODDESS OF HEALTH" with hpunch
 
     healthgod "VERY WELL SLACKER. YOU'RE DISMISSED"
 
@@ -211,6 +221,7 @@ label start:
     hide guide at left with moveoutleft
 
     label mentorpick:
+    scene sunset
     python:
         now = datetime.now()
         hour = float(now.strftime('%H'))
@@ -221,8 +232,8 @@ label start:
     if isOvernight:
         show prezzz with moveinleft
         if firstTimeT5:
-            prezzz "Why in the afterlife are you awake?" with hpunch
-            prezzz "If you don't go back to sleep now, I'll knock you unconscious" with hpunch
+            unknown "Why in the afterlife are you awake?" with hpunch
+            unknown "If you don't go back to sleep now, I'll knock you unconscious" with hpunch
         else:
             prezzz "Why in the afterlife are you awake?" with hpunch
             prezzz "If you don't go back to sleep now, I'll knock you unconscious" with hpunch
@@ -232,21 +243,90 @@ label start:
     menu:
         "Which camp counselor would you like to meet?"
 
-        "Tent 1 counselor, Shef":
-            "Mmmh, it seems she's not there yet. Maybe try another tent?"
-            jump mentorpick
-        "Tent 2 counselor, H2wu":
-            "Mmmh, it seems she's not there yet. Maybe try another tent?"
-            jump mentorpick
-        "Tent 3 counselor, Buffie":
-            "Mmmh, it seems she's not there yet. Maybe try another tent?"
-            jump mentorpick
-        "Tent 4 counselor, Grass Lass":
-            "Mmmh, it seems she's not there yet. Maybe try another tent?"
-            jump mentorpick
-        "Tent 5 counselor, Prezzz":
+        "Tent 1 counselor, [food]":
+            "You walk towards tent 1"
+            jump tent1
+        "Tent 2 counselor, [water]":
+            "You walk towards tent 2"
+            jump tent2
+        "Tent 3 counselor, [fitness]":
+            "You walk towards tent 3"
+            jump tent3
+        "Tent 4 counselor, [social]":
+            "You walk towards tent 4"
+            jump tent4
+        "Tent 5 counselor, [prezzz]":
             "You walk towards tent 5"
             jump tent5
+
+#Food tent
+label tent1:
+    scene tent1
+    "You arrive at the first tent"
+    show food with moveinright
+    if firstTimeT1:
+        unknown "Hi! You must be new here. You look so thin and pale, have you been eating well recently?"
+        unknown "Don't worry about it! With my food and nutrition plan, you'll be so organic,
+        students will study you in chemistry."
+        unknown "You can call me [food] btw."
+    hide food with moveoutright
+    jump mentorpick
+
+#Hydration tent
+label tent2:
+    scene tent1
+    "You arrive at the second tent. It seems drenched?"
+    show water with moveinright
+    if firstTimeT2:
+        unknown "Oh noooo, you poor thing! (┬┬_┬┬) You look so dry..."
+        unknown "I.. I... I mean thirsty... uh nooo"
+        unknown "{i} I can do this! Remember [water], conversation 101"
+        water "Hi! ☆*: .. o(≧▽≦)o ..:*☆ I'm [water]! I'll be making sure you stay nice and hydrated"
+        water "And that your body is always composed of around 60 percent liquid!"
+        water "{i} uhh that might have been too specific for a first conversation...{i}"
+    hide water with moveoutright
+    jump mentorpick
+
+#Fitness tent
+label tent3:
+    scene tent3
+    "You arrive at the third tent but... {i}UP 302{/i}"
+    "{i}UP 303{/i}"
+    "{i}UP 304{/i}"
+    "Why does this sound like a beep test?!?!?!"
+    "Painful memories from high school gym class flash before your eyes"
+    show healthgod with moveinright
+    "WAIT... WHAT IS HE DOING HERE?!?!" with vpunch
+    healthgod "THICKEN UP SLACKER! YOUR MUSCLES ARE SO THIN I THOUGHT YOU WERE A WALKING DRIED MANGO" with hpunch
+    healthgod 'THAT THE GOD OF MEMORY LEFT OUT IN THE SUN TO DRY EVEN MORE' with hpunch
+    healthgod 'AND THEN HE FORGOT ABOUT YOU WHILE ALL YOUR MUSCLES MELTED AWAY!' with hpunch
+    "You have a bad feeling about this"
+    healthgod "NO WORRIES SLACKER! ONCE I'M DONE WITH YOU, THEY'LL HAVE TO REMAKE THE PERIODIC TABLE WITH THE NEW
+    HARDEST ELEMENT ON EARTH," with hpunch
+    healthgod "THOSE ABS! ATOMIC NUMBER 12-PACK" with hpunch
+    healthgod "NOW LET'S START WITH OUR FIRST SET OF A THOUSAND PUSH UPS" with hpunch
+    "A THOUSAND WHAT?" with vpunch
+    healthgod "IN POSITION NONMUSCULAR SLACKER. {i}UP 1, UP 2, UP 3, ...{/i}" with hpunch
+    hide healthgod with moveoutright
+    scene black
+    with fade
+    "After an infernal workout regiment that made you wonder what happens in hell, you scurried back to the campsite"
+    jump mentorpick
+    
+label tent4:
+    scene tent4
+    "You arrive at the fourth tent. It seems very lively!"
+    show guide with moveinright
+    if firstTimeT4:
+        guide "HI THERE SWEETIE! I'm the counselor who'll take take care of that unsocial social life of yours!"
+        guide "You can call me [social]"
+        YN "Wait, but aren't you [guidep]?"
+        guide "Whatttt? [guidep]? Who is that? I've never heard of them before? Nu-uh? First time that name has reached these ears!"
+        guide "Hahahaha I guess your social life is better than I thought! Maybe you could introduce me to them!"
+        guide "{i} Aghhhhh, I think I've fooled them for now. This camp is so understaffed!{/i}"
+        guide "{i} If only the [healthgod] didn't scare away all our interns...{/i}"
+    hide guide with moveoutright
+    jump mentorpick
 
 label tent5:
     scene tent5
@@ -255,7 +335,9 @@ label tent5:
     if firstTimeT5:
         unknown "You must be the newbie. I'm assuming you're here for bedtime?"
         unknown "It's a little early for that, but hey, to each their own."
-    
+        unknown "You can call me Prezzz btw. It's short for Sleep President"
+        $firstTimeT5 = False
+
     
     label menutent5:
     menu:
@@ -301,14 +383,29 @@ label tent5:
                     return (time2-time1)
                 sleeplength = timeAdd(sleepstart, sleepend)
             if sleeplength < 6.0:
-                "Yikes, you really do need to work on that huh?"
+                prezzz "Yikes, you really do need to work on that huh?"
+                YN "I know... I feel so tired"
+                prezzz "Well, maybe you wouldn't be as tired if you {i}*chekcs notes*{/i} ACTUALLY SLEPT!"
+                prezzz "What do you even do all night camper?! Stream anime? Play Valorant?!"
+                prezzz "Tsk... This is unacceptable behaviour. I'll be seeing you in tent 5's sleep detention tonight"
+                prezzz "Don't forget to bring your sleeping bag. 
+                I don't care if we have to make you sleep on the floor, as long as you sleep."
+                prezzz "A plush will be provided for you though if you don't have one... I hope we can fix that sleep schedule of yours"
             else:
-                "Hmm, and you actually stick to that?"
+                prezzz "Hmm, and you actually stick to that?"
+                YN "Yes! I try my best!"
+                prezzz "Trying isn't enough! Your best? We'll see about that once you have exams and assignments piled up"
+                YN "We... we even have exams in the afterlife?"
+                prezzz "QUIZ TIME CAMPER! How many hours do cats sleep in a day?"
+                YN "12 to 18 hours I think! As they age, cats also spend more time sleeping."
+                prezzz "WELL DONE CAMPER!"
+                prezzz "If a cat can do 12 to 18 hours a day, surely you can manage more than half of that no?"
+                YN "I... I'll keep that in mind!!!"
+                prezzz "Well done camper! I expect you to dream well as well."
             jump menutent5
 
-        "I just wanted to meet the mentor" if firstTimeT5:
-            unknown "I am the mentor for your poor soul's sleep schedule. You can call me Prezzz.
-            It's short for Sleep President"
+        "I just wanted to meet the mentor":
+            prezzz "I am the mentor for your poor soul's sleep schedule."
 
             YN "... but you don't look sleepy"
 
@@ -317,10 +414,9 @@ label tent5:
             "She squints at your eyebags, pointedly"
 
             prezzz "Unlike {i}you{/i}"
-            $firstTimeT5 = False
             jump menutent5
         "Mmh, actually no. (Return to all tents)":
-            "See you later. (Whispers: {i}in your dreams{/i})"
+            "See you later, {i}in your dreams.{/i}"
     hide prezzz at right with moveoutright
     jump mentorpick
 
