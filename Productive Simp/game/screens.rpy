@@ -423,7 +423,6 @@ screen main_menu():
 
     # add gui.main_menu_background
     add TrackCursor("gui/main_menu.png", 20)
-    add TrackCursor("gui/main_menu_layer_5.png", 50)
     # add TrackCursor("gui/main_menu_layer_2.png", 10)
 
     
