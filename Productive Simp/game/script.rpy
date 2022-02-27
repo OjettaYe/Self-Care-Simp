@@ -197,10 +197,13 @@ label start:
     show prezzz at right with moveinright
     guidep "And Tent 5 is to go to sleep."
 
+    hide Prezzz at right with moveoutright
+
     scene sunset
     guidep "I suggest you go meet them! Return to me afterwards if you have any other questions."
     hide guide at left with moveoutleft
 
+    label tentall:
     menu mentorpick:
         "Which mentor would you like to know?"
 
@@ -214,15 +217,18 @@ label start:
         "Tent 4 councilor, grass lass":
             "Mmmh, it seems he's not there yet. Maybe try another tent?"
         "Tent 5 councilor, Prezzz":
-            "You walkt towards tent 5"
+            "You walk towards tent 5"
             jump tent5
 
 label tent5:
     scene tent5
     "You arrive at the tent on the far right."
     show prezzz with moveinright
-    unknown "You must be the newbie. I'm assuming you're here for bedtime?"
-    unknown "It's a little early for that, but hey, to each their own."
+    if firstTimeT5:
+        unknown "You must be the newbie. I'm assuming you're here for bedtime?"
+        unknown "It's a little early for that, but hey, to each their own."
+    
+    label menutent5:
     menu:
         "Yes, sleep. Please":
             "What's your sleep schedule like?"
@@ -265,6 +271,7 @@ label tent5:
             #Time choices
             "Yikes, you really do need to work on that huh?"
             "Hmm, and you actually stick to that?"
+            jump menutent5
 
         "I just wanted to meet the mentor" if firstTimeT5:
             unknown "I am the mentor for your poor soul's sleep schedule. You can call Prezzz.
@@ -278,6 +285,11 @@ label tent5:
 
             Prezzz "Unlike {i}you{/i}"
             $firstTimeT5 = False
+            jump menutent5
+        "Mmh, actually no. (Return to all tents)":
+            "See you later. (Whispers: {i}in your dreams{/i})"
+    hide prezzz at right with moveoutright
+    jump tentall
 
 
         
