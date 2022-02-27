@@ -18,7 +18,11 @@ define Prezzz = Character("Prezzz")
 
 define sleepstart = 0
 define sleepend = 0
+define sleeplength = 0
 define firstTimeT5 = True
+
+define time1 = 0
+define time2 = 0
 
 # The game starts here.
 
@@ -45,7 +49,6 @@ label start:
     # These display lines of dialogue.
 
     "You're floating.​"
-    jump menutent5
 
     "Around you is a horizon of stars stretching into the dark backdrop of the universe.​"
 
@@ -204,8 +207,7 @@ label start:
     scene sunset
     guidep "I suggest you go meet them! Return to me afterwards if you have any other questions."
     hide guide at left with moveoutleft
-
-    
+xw
     menu mentorpick:
         "Which mentor would you like to know?"
 
@@ -248,15 +250,11 @@ label tent5:
             python:
                 from datetime import datetime
                 try:
-                    
                     sleepstart = datetime.strptime(sleeptxt, "%H:%M")
                     validtime = True
                 except Exception as e:
                     error = e
                     validtime = False
-            "[sleeptxt]"
-            "[sleepstart]"
-            "[error]"
             if validtime != True :
                 "Sorry, that's an invalid time."
                 jump entersleep
@@ -264,38 +262,27 @@ label tent5:
             python:
                 import time
                 try:
-                    
                     sleepend = datetime.strptime(sleeptxt, "%H:%M")
                     validtime = True
                 except Exception as e:
                     error = e
                     validtime = False
-            # "[sleeptxt]"
-            # "[sleepstart]"
-            # "[error]"
             if validtime != True :
                 "Sorry, that's an invalid time."
                 jump entersleep
             #Time choices
-            "TEST1"
-            $test = (sleepstart.strftime('%H'))
-            if (test == "20"):
-                "TEST2"
-            "[test]"
-            "Python"
             python:
                 def timeAdd(t1, t2):
-                    time1 = float(t1.strftime('%H')) + float(t1.strftime('%M')/60)
-                    time2 = float(t2.strftime('%H')) + float(t2.strftime('%M')/60)
+                    time1 = float(t1.strftime('%H')) + (float(t1.strftime('%M')))/60
+                    time2 = float(t2.strftime('%H')) + (float(t2.strftime('%M')))/60
                     if float(t2.strftime('%H')) < float(t1.strftime('%H')):
-                        temp = 24 - time2
-                        time2+=temp
-                    timeslept = time1 + time2
-                timeAdd(sleepstart, sleepend)
-            "Overnight? YN"
-            "[timeslept]"
-            "Yikes, you really do need to work on that huh?"
-            "Hmm, and you actually stick to that?"
+                        time2 = 24 + time2
+                    return (time2-time1)
+                sleeplength = timeAdd(sleepstart, sleepend)
+            if sleeplength < 6.0:
+                "Yikes, you really do need to work on that huh?"
+            else:
+                "Hmm, and you actually stick to that?"
             jump menutent5
 
         "I just wanted to meet the mentor" if firstTimeT5:
