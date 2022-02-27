@@ -16,7 +16,6 @@ With beautiful sceneries and a diverse cast of characters, you will be healthier
 ![God's Solution](Documentation/God3.png) 
 ![The Gates](Documentation/Gates.png) 
 ![The Goddess of Health](Documentation/GodHealth.png) 
-![Campfire](Documentation/Campfire.png)
 ![The Counselor](Documentation/Guide.png)
 ![Lake](Documentation/Lake.png) 
 ![Time to sleep](Documentation/go_sleep.png) 
