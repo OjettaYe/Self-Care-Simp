@@ -385,7 +385,7 @@ label tent5:
             if sleeplength < 6.0:
                 prezzz "Yikes, you really do need to work on that huh?"
                 YN "I know... I feel so tired"
-                prezzz "Well, maybe you wouldn't be as tired if you {i}*chekcs notes*{/i} ACTUALLY SLEPT!"
+                prezzz "Well, maybe you wouldn't be as tired if you {i}*checks notes*{/i} ACTUALLY SLEPT!"
                 prezzz "What do you even do all night camper?! Stream anime? Play Valorant?!"
                 prezzz "Tsk... This is unacceptable behaviour. I'll be seeing you in tent 5's sleep detention tonight"
                 prezzz "Don't forget to bring your sleeping bag. 

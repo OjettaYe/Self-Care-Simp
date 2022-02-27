@@ -64,7 +64,7 @@ define gui.name_text_font = "DejaVuSans.ttf"
 define gui.interface_text_font = "DejaVuSans.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 33
+define gui.text_size = 40
 
 ## The size of character names.
 define gui.name_text_size = 45
@@ -79,7 +79,7 @@ define gui.label_text_size = 36
 define gui.notify_text_size = 24
 
 ## The size of the game's title.
-define gui.title_text_size = 75
+define gui.title_text_size = 140
 
 
 ## Main and Game Menus #########################################################
@@ -149,7 +149,7 @@ define gui.button_width = None
 define gui.button_height = None
 
 ## The borders on each side of the button, in left, top, right, bottom order.
-define gui.button_borders = Borders(6, 6, 6, 6)
+define gui.button_borders = Borders(6, 20, 6, 20)
 
 ## If True, the background image will be tiled. If False, the background image
 ## will be linearly scaled.
@@ -159,7 +159,7 @@ define gui.button_tile = False
 define gui.button_text_font = gui.interface_text_font
 
 ## The size of the text used by the button.
-define gui.button_text_size = gui.interface_text_size
+define gui.button_text_size = 50
 
 ## The color of button text in various states.
 define gui.button_text_idle_color = gui.idle_color
