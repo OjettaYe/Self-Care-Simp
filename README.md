@@ -29,5 +29,5 @@ We hope to eventually fully add all 5 counselors as well as many co-campers and 
 *Written with Ren'Py*  
 *Character artwork by Aigiarn with Krita </br>*
 *Background artwork by Angela with Blender and Krita </br>* 
-*Music by Ojetta* 
+*Music by Ojetta with BandLab* 
 
