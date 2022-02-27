@@ -14,12 +14,15 @@ define healthgod = Character("God of Health")
 define guide = Character("God of Guidance")
 define guidep = Character("Caitlyn")
 define unknown = Character("???")
-define Prezzz = Character("Prezzz")
+define prezzz = Character("Prezzz")
 
 define sleepstart = 0
 define sleepend = 0
 define sleeplength = 0
 define firstTimeT5 = True
+define isOvernight = False
+
+define now = 0
 
 define time1 = 0
 define time2 = 0
@@ -202,13 +205,32 @@ label start:
     show prezzz at right with moveinright
     guidep "And Tent 5 is to go to sleep."
 
-    hide Prezzz at right with moveoutright
+    hide prezzz at right with moveoutright
 
     scene sunset
     guidep "I suggest you go meet them! Return to me afterwards if you have any other questions."
     hide guide at left with moveoutleft
 
-    menu mentorpick:
+    label mentorpick:
+    python:
+        now = datetime.now()
+        hour = float(now.strftime('%H'))
+        if hour >= 23.0 or hour <= 6.0:
+            isOvernight =  True
+        else:
+            isOvernight = False
+    if isOvernight:
+        show prezzz with moveinleft
+        if firstTimeT5:
+            prezzz "Why in the afterlife are you awake?" with hpunch
+            prezzz "If you don't go back to sleep now, I'll knock you unconscious" with hpunch
+        else:
+            prezzz "Why in the afterlife are you awake?" with hpunch
+            prezzz "If you don't go back to sleep now, I'll knock you unconscious" with hpunch
+        hide prezzz with moveinleft
+
+
+    menu:
         "Which mentor would you like to know?"
 
         "Tent 1 councilor, Shef":
@@ -291,11 +313,11 @@ label tent5:
 
             YN "... but you don't look sleepy"
 
-            Prezzz "Exactly. Because I get enough sleep."
+            prezzz "Exactly. Because I get enough sleep."
 
             "She squints at your eyebags, pointedly"
 
-            Prezzz "Unlike {i}you{/i}"
+            prezzz "Unlike {i}you{/i}"
             $firstTimeT5 = False
             jump menutent5
         "Mmh, actually no. (Return to all tents)":
