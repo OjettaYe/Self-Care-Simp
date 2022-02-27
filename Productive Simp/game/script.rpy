@@ -183,7 +183,7 @@ label start:
 
     show healthgod at right with moveinright
 
-    "The [healthgod] frowns. Is he able to hear your conversation? Are gods all-knowing? Can he read your thoughts?"
+    "The [healthgod] frowns. Is she able to hear your conversation? Are gods all-knowing? Can she read your thoughts?"
 
     hide healthgod at right with moveoutright
 
@@ -296,7 +296,7 @@ label tent3:
     "Why does this sound like a beep test?!?!?!"
     "Painful memories from high school gym class flash before your eyes"
     show healthgod with moveinright
-    "WAIT... WHAT IS HE DOING HERE?!?!" with vpunch
+    "WAIT... WHAT IS SHE DOING HERE?!?!" with vpunch
     healthgod "THICKEN UP SLACKER! YOUR MUSCLES ARE SO THIN I THOUGHT YOU WERE A WALKING DRIED MANGO" with hpunch
     healthgod 'THAT THE GOD OF MEMORY LEFT OUT IN THE SUN TO DRY EVEN MORE' with hpunch
     healthgod 'AND THEN HE FORGOT ABOUT YOU WHILE ALL YOUR MUSCLES MELTED AWAY!' with hpunch
