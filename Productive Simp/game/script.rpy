@@ -14,6 +14,7 @@ define healthgod = Character("God of Health")
 define guide = Character("God of Guidance")
 define guidep = Character("Caitlyn")
 define unknown = Character("???")
+define Prezzz = Character("Prezzz")
 
 define sleepstart = 0
 define sleepend = 0
