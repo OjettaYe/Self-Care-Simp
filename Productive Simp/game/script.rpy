@@ -84,7 +84,7 @@ label start:
     god "Well, how are you suppposed to save the world when you can't even save yourself?"
     god "I'm sending you to Health Camp. Off you go!"
 
-    "{i}She punts you into the distance{/i} (cue Mario-like scream)?"
+    "{i}She punts you into the distance{/i}"
 
     # Scene 2
     scene gate
@@ -148,8 +148,7 @@ label start:
     "As you watch the sun set, you suddenly remember about the campfire orientation event!!!"
     YN "{b} OH NOOOO!!!!! {/b}" with hpunch
 
-    "You look at your watch. 6:58 PM! Without skipping a beat, you dash across the tents and go sit by the campfire
-    , sitting down on a log just as your watch indicates 7:00 PM!"
+    "You look at your watch. 6:58 PM! Without skipping a beat, you dash across the tents and go sit by the campfire, sitting down on a log just as your watch indicates 7:00 PM!"
 
     show healthgod at right with moveinright
 
@@ -231,21 +230,21 @@ label start:
 
 
     menu:
-        "Which mentor would you like to know?"
+        "Which camp counselor would you like to meet?"
 
-        "Tent 1 councilor, Shef":
+        "Tent 1 counselor, Shef":
             "Mmmh, it seems she's not there yet. Maybe try another tent?"
             jump mentorpick
-        "Tent 2 councilor, H2wu":
+        "Tent 2 counselor, H2wu":
             "Mmmh, it seems she's not there yet. Maybe try another tent?"
             jump mentorpick
-        "Tent 3 councilor, Buffie":
+        "Tent 3 counselor, Buffie":
             "Mmmh, it seems she's not there yet. Maybe try another tent?"
             jump mentorpick
-        "Tent 4 councilor, Grass Lass":
+        "Tent 4 counselor, Grass Lass":
             "Mmmh, it seems she's not there yet. Maybe try another tent?"
             jump mentorpick
-        "Tent 5 councilor, Prezzz":
+        "Tent 5 counselor, Prezzz":
             "You walk towards tent 5"
             jump tent5
 
