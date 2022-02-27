@@ -17,6 +17,7 @@ define unknown = Character("???")
 
 define sleepstart = 0
 define sleepend = 0
+define firstTimeT5 = True
 
 # The game starts here.
 
@@ -244,6 +245,42 @@ label tent5:
             if validtime != True :
                 "Sorry, that's an invalid time."
                 jump entersleep
+            $sleeptxt = renpy.input("Please enter when you go to bed (hh:minmin) ")
+            python:
+                import time
+                try:
+                    
+                    sleepend = time.strptime(sleeptxt, "%H:%M")
+                    validtime = True
+                except Exception as e:
+                    error = e
+                    validtime = False
+            # "[sleeptxt]"
+            # "[sleepstart]"
+            # "[error]"
+            if validtime != True :
+                "Sorry, that's an invalid time."
+                jump entersleep
+            #Time choices
+            "Yikes, you really do need to work on that huh?"
+            "Hmm, and you actually stick to that?"
+
+        "I just wanted to meet the mentor" if firstTimeT5:
+            unknown "I am the mentor for your poor soul's sleep schedule. You can call Prezzz.
+            It's short for Sleep President"
+
+            YN "... but you don't look sleey"
+
+            Prezzz "Exactly. Because I get enough sleep."
+
+            "She squints at your eyebags, pointedly"
+
+            Prezzz "Unlike {i}you{/i}"
+            $firstTimeT5 = False
+
+
+        
+
 
 
 
